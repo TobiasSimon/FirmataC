@@ -6,7 +6,7 @@ int             main()
   t_firmata     *firmata;
   int           i = 0;
 
-  firmata = firmata_new("/dev/ttyACM0"); //init Firmata
+  firmata = firmata_new("/dev/ttySAC0"); //init Firmata
   while(!firmata->isReady) //Wait until device is up
     firmata_pull(firmata);
   firmata_pinMode(firmata, 13, MODE_OUTPUT); //set pin 13 (led on most arduino) to out

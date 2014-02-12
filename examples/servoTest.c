@@ -5,7 +5,7 @@ int		main()
   t_firmata	*firmata;
   t_servo	*servo;
 
-  firmata = firmata_new("/dev/ttyACM0");
+  firmata = firmata_new("/dev/ttySAC0");
   while(!firmata->isReady)
     firmata_pull(firmata);
   sleep(1);
